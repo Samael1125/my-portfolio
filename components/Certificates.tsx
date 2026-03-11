@@ -6,20 +6,26 @@ import { FaCertificate } from "react-icons/fa"
 const certificates = [
 
 {
-title:"Machine Learning Certification",
-issuer:"Coursera",
-year:"2024"
+title:"Data Analytics with Python",
+org:"NPTEL",
+year:"2025"
 },
 
 {
-title:"Python Programming",
-issuer:"Udemy",
-year:"2023"
+title:"Full Stack Web Development",
+org:"Placify Technologies",
+year:"2025"
 },
 
 {
-title:"Data Analytics Fundamentals",
-issuer:"Google",
+title:"MS SQL",
+org:"Intellipaat",
+year:"2025"
+},
+
+{
+title:"Mastering C",
+org:"CSE Pathshala",
 year:"2024"
 }
 
@@ -35,34 +41,22 @@ return(
 Certificates
 </h2>
 
-<div className="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+<div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
 
-{certificates.map((cert,i)=>(
-
+{certificates.map((c,i)=>(
 <motion.div
 key={i}
 whileHover={{scale:1.05}}
-className="p-8 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 text-center"
+className="p-8 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg"
 >
 
-<div className="text-blue-400 text-4xl mb-4 flex justify-center">
-<FaCertificate/>
-</div>
+<h3 className="text-xl font-semibold">{c.title}</h3>
 
-<h3 className="text-lg font-semibold">
-{cert.title}
-</h3>
+<p className="text-gray-400 mt-2">{c.org}</p>
 
-<p className="text-gray-400 mt-2">
-{cert.issuer}
-</p>
-
-<p className="text-sm text-gray-500 mt-1">
-{cert.year}
-</p>
+<span className="text-green-400 text-sm">{c.year}</span>
 
 </motion.div>
-
 ))}
 
 </div>

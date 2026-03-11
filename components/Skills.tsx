@@ -1,49 +1,72 @@
 "use client"
 
-import { FaPython, FaGitAlt, FaJs } from "react-icons/fa"
-import { SiCplusplus, SiFlask, SiMysql } from "react-icons/si"
-import { motion } from "framer-motion"
+export default function Skills(){
 
-const skills = [
-  { name: "Python", icon: <FaPython /> },
-  { name: "C++", icon: <SiCplusplus /> },
-  { name: "JavaScript", icon: <FaJs /> },
-  { name: "Flask", icon: <SiFlask /> },
-  { name: "Git", icon: <FaGitAlt /> },
-  { name: "SQL", icon: <SiMysql /> },
+const skillCategories = [
+
+{
+title:"Languages",
+skills:["Python","C++","C","Java","JavaScript","SQL"]
+},
+
+{
+title:"Tools & Platforms",
+skills:["MongoDB","MS SQL Server","GitHub","Anaconda","Figma","Framer"]
+},
+
+{
+title:"Libraries",
+skills:["NumPy","Pandas","Matplotlib","Seaborn","Scikit-learn"]
+},
+
+{
+title:"Soft Skills",
+skills:["Problem Solving","Team Collaboration","Project Management","Adaptability"]
+}
+
 ]
 
-export default function Skills() {
-  return (
+return(
 
-    <section id="skills" className="py-32">
+<section id="skills" className="py-32">
 
-      <h2 className="text-4xl font-bold text-center mb-16">
-        Skills
-      </h2>
+<h2 className="text-4xl font-bold text-center mb-16">
+Skills
+</h2>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 max-w-6xl mx-auto px-6">
+<div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
 
-        {skills.map((skill, index) => (
+{skillCategories.map((category,index)=> (
 
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.1 }}
-            className="flex flex-col items-center justify-center p-8 rounded-xl bg-white/5 border border-white/10 hover:border-blue-400 hover:scale-105 transition"
-          >
+<div key={index}>
 
-            <div className="text-4xl mb-3 text-blue-400">
-              {skill.icon}
-            </div>
+<h3 className="text-xl font-semibold mb-6">
+{category.title}
+</h3>
 
-            <p>{skill.name}</p>
+<div className="flex flex-wrap gap-3">
 
-          </motion.div>
+{category.skills.map((skill,i)=> (
 
-        ))}
+<span
+key={i}
+className="px-4 py-2 bg-green-500/10 border border-green-400/20 rounded-lg text-green-300"
+>
+{skill}
+</span>
 
-      </div>
+))}
 
-    </section>
-  )
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</section>
+
+)
+
 }

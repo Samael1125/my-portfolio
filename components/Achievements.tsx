@@ -3,24 +3,30 @@
 import { motion } from "framer-motion"
 import { FaTrophy, FaCode } from "react-icons/fa"
 
-const achievements = [
+const achievements=[
 
 {
-title:"Competitive Programming",
-desc:"Solved coding problems on platforms like LeetCode and HackerRank to strengthen problem-solving skills."
+title:"Full-Stack & ML Projects",
+desc:"Built multiple machine learning and full-stack applications"
 },
 
 {
-title:"Project Development",
-desc:"Developed multiple real-world projects including AI Code Review System and Smart Irrigation ML model."
+title:"AI Internship",
+desc:"Completed AI internship working with neural networks and prediction models"
 },
 
 {
-title:"Technical Learning",
-desc:"Completed certifications and continuously improving skills in Machine Learning and backend development."
+title:"Smart Irrigation ML",
+desc:"Developed ML pipeline for groundwater analysis and smart irrigation"
+},
+
+{
+title:"Backend & ML Skills",
+desc:"Strong foundation in Python, ML libraries and backend development"
 }
 
 ]
+
 
 export default function Achievements(){
 
@@ -38,7 +44,7 @@ Achievements
 
 <motion.div
 key={i}
-whileHover={{scale:1.05}}
+whileHover={{scale:1.05, y:-5}}
 className="p-8 rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 text-center"
 >
 

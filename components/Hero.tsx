@@ -2,10 +2,14 @@
 
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
+import GridBackground from "./GridBackground"
 
 export default function Hero() {
 
 return (
+<section className="relative">
+
+<GridBackground/>
 
 <section className="min-h-screen flex items-start pt-40 px-16">
 
@@ -114,7 +118,7 @@ className="object-cover"
 </div>
 
 </section>
-
+</section>
 )
 
 }
