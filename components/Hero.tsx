@@ -1,12 +1,13 @@
 "use client"
 
+import Image from "next/image"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 
-export default function Hero(){
+export default function Hero() {
 
-return(
+return (
 
-<section className="min-h-screen flex items-center px-10">
+<section className="min-h-screen flex items-start pt-40 px-16">
 
 <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
@@ -18,11 +19,11 @@ return(
 Software Engineer
 </p>
 
-<h1 className="text-6xl md:text-7xl font-bold leading-tight">
+<h1 className="text-7xl md:text-[110px] font-bold leading-[1.05]">
 
 Hello I'm <br/>
 
-<span style={{color:"var(--accent)"}}>
+<span className="text-[#00ffa3]">
 Utkarsh Jhala
 </span>
 
@@ -30,21 +31,17 @@ Utkarsh Jhala
 
 <p className="text-gray-400 mt-6 max-w-lg">
 Computer Science Engineer focused on Machine Learning,
-AI systems, and backend development. Building
-intelligent solutions for real world problems.
+AI systems, and backend development. Building intelligent
+solutions for real world problems.
 </p>
-
-{/* BUTTONS */}
 
 <div className="flex items-center gap-6 mt-8">
 
 <a
 href="/resume.pdf"
-className="px-6 py-3 border border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition"
+className="px-8 py-4 border text-lg border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition"
 >
-
 View CV
-
 </a>
 
 <div className="flex gap-4 text-xl">
@@ -72,17 +69,43 @@ View CV
 
 <div className="flex justify-center">
 
-<div className="relative w-72 h-72">
+<div className="relative w-[420px] h-[420px] flex items-center justify-center">
 
-<img
+{/* rotating segmented ring */}
+
+
+<svg
+  className="absolute w-[500px] h-[500px] animate-spin-slow"
+  viewBox="0 0 200 200"
+>
+
+  <circle
+    cx="100"
+    cy="100"
+    r="96"
+    fill="none"
+    stroke="#00ffa3"
+    strokeWidth="2.5"
+    strokeDasharray="12 20"
+    strokeLinecap="round"
+  />
+
+</svg>
+{/* outer glow circle */}
+
+<div className="absolute w-[430px] h-[430px] rounded-full border border-green-400/30"></div>
+
+{/* profile image */}
+<div className="relative w-[370px] h-[370px] rounded-full overflow-hidden profile-glow">
+
+<Image
 src="/profile.jpg"
-className="rounded-full w-full h-full object-cover"
+alt="profile"
+fill
+className="object-cover"
 />
 
-<div
-className="absolute inset-0 rounded-full border-2"
-style={{borderColor:"var(--accent)"}}
-/>
+</div>
 
 </div>
 
