@@ -33,6 +33,15 @@ const projects = [
     github: "#",
     demo: "#",
   },
+  {
+  title: "Local Technician Finder",
+  description:
+    "A web platform that connects users with nearby technicians for various services. It allows users to search for technicians, view details, and request services easily.",
+  tech: ["Python", "Flask", "SQLite", "HTML", "CSS"],
+  image: "/projects/local-technician.png",
+  github: "https://github.com/Samael1125/Local-Technician-Finder",
+  demo: "#"
+},
 ]
 
 export default function Projects() {
