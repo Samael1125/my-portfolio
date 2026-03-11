@@ -8,6 +8,7 @@ import Github from "../components/Github"
 import Timeline from "../components/Timeline"
 import Certificates from "../components/Certificates"
 import Achievements from "../components/Achievements"
+import Resume from "../components/Resume"
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <Projects/>
       <Timeline/>
       <Certificates/>
+      <Achievements/>
+      <Resume/>
       <Github/>
       <Contact/>
     </>
