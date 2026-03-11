@@ -1,37 +1,47 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { TypeAnimation } from "react-type-animation"
 
-export default function Hero(){
+export default function Hero() {
+  return (
 
-return(
+    <section className="h-screen flex flex-col justify-center items-center text-center px-6">
 
-<section className="h-screen flex flex-col justify-center items-center text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+      >
+        Utkarsh Jhala
+      </motion.h1>
 
-<motion.h1
-initial={{opacity:0,y:40}}
-animate={{opacity:1,y:0}}
-transition={{duration:1}}
-className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
->
+      <div className="text-xl mt-6 text-gray-300">
 
-Utkarsh Jhala
+        <TypeAnimation
+          sequence={[
+            "AI Engineer",
+            2000,
+            "Machine Learning Developer",
+            2000,
+            "Backend Developer",
+            2000,
+            "Problem Solver",
+            2000
+          ]}
+          wrapper="span"
+          speed={50}
+          repeat={Infinity}
+        />
 
-</motion.h1>
+      </div>
 
-<motion.p
-initial={{opacity:0}}
-animate={{opacity:1}}
-transition={{delay:0.5}}
-className="text-xl mt-4 text-gray-300"
->
+      <p className="max-w-xl mt-6 text-gray-400">
+        Building intelligent systems and scalable software solutions using
+        machine learning, data science, and modern web technologies.
+      </p>
 
-AI Engineer • Machine Learning • Backend Developer
-
-</motion.p>
-
-</section>
-
-)
-
+    </section>
+  )
 }
