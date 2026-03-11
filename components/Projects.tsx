@@ -1,135 +1,136 @@
 "use client"
 
 import Image from "next/image"
-import { motion } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 
 const projects = [
-  {
-    title: "Secure AI Code Review System",
-    description:
-      "AI-powered platform that reviews source code for security vulnerabilities and quality issues using machine learning.",
-    tech: ["Flask", "Python", "AI"],
-    image: "/projects/secure-review.png",
-    github: "https://github.com/YOUR_USERNAME/repo",
-    demo: "#",
-  },
-  {
-    title: "Smart Irrigation ML System",
-    description:
-      "Machine learning system analyzing groundwater structures and environmental data for intelligent irrigation planning.",
-    tech: ["Python", "ML", "GIS"],
-    image: "/projects/irrigation-ml.png",
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Jarvis Desktop Assistant",
-    description:
-      "Voice-controlled AI assistant capable of system automation, task management, and command execution.",
-    tech: ["Python", "NLP"],
-    image: "/projects/jarvis.png",
-    github: "#",
-    demo: "#",
-  },
-  {
-  title: "Local Technician Finder",
-  description:
-    "A web platform that connects users with nearby technicians for various services. It allows users to search for technicians, view details, and request services easily.",
-  tech: ["Python", "Flask", "SQLite", "HTML", "CSS"],
-  image: "/projects/local-technician.png",
-  github: "https://github.com/Samael1125/Local-Technician-Finder",
-  demo: "#"
-},
+
 {
-  title: "TriviaBot",
-  description:
-    "Interactive chatbot that generates and manages trivia questions. Designed to provide engaging quizzes and automate question-answer interactions.",
-  tech: ["Python", "Flask", "API", "HTML", "CSS"],
-  image: "/projects/triviabot.png",
-  github: "https://github.com/Samael1125/TriviaBot",
-  demo: "#"
+title:"Smart Irrigation ML System",
+desc:"Machine learning model analyzing groundwater structures and environmental data for intelligent irrigation planning.",
+image:"/projects/irrigation.png",
+tech:["Python","Machine Learning","Data Analysis"],
+github:"#",
+demo:"#"
 },
+
+{
+title:"Secure AI Code Review",
+desc:"AI system that analyzes source code for vulnerabilities and code quality issues.",
+image:"/projects/codereview.png",
+tech:["Python","Flask","AI"],
+github:"#",
+demo:"#"
+},
+
+{
+title:"Local Technician Finder",
+desc:"Platform connecting users with nearby technicians for services using Flask backend.",
+image:"/projects/technician.png",
+tech:["Flask","SQLite","HTML","CSS"],
+github:"https://github.com/Samael1125/Local-Technician-Finder",
+demo:"#"
+},
+
+{
+title:"TriviaBot",
+desc:"Interactive chatbot generating trivia questions and managing quiz interactions.",
+image:"/projects/triviabot.png",
+tech:["Python","Flask","API"],
+github:"https://github.com/Samael1125/TriviaBot",
+demo:"#"
+}
+
 ]
 
-export default function Projects() {
-  return (
-    <section id="projects" className="py-32 px-6">
+export default function Projects(){
 
-      <h2 className="text-4xl font-bold text-center mb-20">
-        Projects
-      </h2>
+return(
 
-      <div className="max-w-6xl mx-auto grid md:col-span-2 lg:grid-cols-3 gap-12">
+<section id="projects" className="py-32 px-6">
 
-        {projects.map((project, i) => (
+<h2 className="text-5xl font-bold text-center mb-20">
 
-          <motion.div
-            key={i}
-            whileHover={{ scale: 1.03 }}
-            className="bg-white/5 rounded-xl overflow-hidden backdrop-blur-lg border border-white/10"
-          >
+A small selection of
+<span style={{color:"var(--accent)"}}> recent projects</span>
 
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={500}
-              height={300}
-              className="w-full h-48 object-cover"
-            />
+</h2>
 
-            <div className="p-6">
+<div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
 
-              <h3 className="text-xl font-semibold mb-2">
-                {project.title}
-              </h3>
+{projects.map((project,i)=>(
 
-              <p className="text-gray-400 text-sm mb-4">
-                {project.description}
-              </p>
+<div
+key={i}
+className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:scale-[1.02] transition"
+>
 
-              <div className="flex flex-wrap gap-2 mb-4">
+<Image
+src={project.image}
+alt={project.title}
+width={600}
+height={400}
+className="w-full h-64 object-cover"
+/>
 
-                {project.tech.map((tech, index) => (
+<div className="p-6">
 
-                  <span
-                    key={index}
-                    className="text-xs px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full"
-                  >
-                    {tech}
-                  </span>
+<h3 className="text-xl font-semibold">
+{project.title}
+</h3>
 
-                ))}
+<p className="text-gray-400 mt-3 text-sm">
+{project.desc}
+</p>
 
-              </div>
+<div className="flex flex-wrap gap-2 mt-4">
 
-              <div className="flex gap-4">
+{project.tech.map((tech,index)=>(
 
-                <a
-                  href={project.github}
-                  className="flex items-center gap-2 text-sm hover:text-blue-400"
-                >
-                  <FaGithub /> Code
-                </a>
+<span
+key={index}
+className="text-xs px-3 py-1 bg-green-500/20 text-green-300 rounded-full"
+>
+{tech}
+</span>
 
-                <a
-                  href={project.demo}
-                  className="flex items-center gap-2 text-sm hover:text-blue-400"
-                >
-                  <FiExternalLink /> Demo
-                </a>
+))}
 
-              </div>
+</div>
 
-            </div>
+<div className="flex gap-6 mt-6">
 
-          </motion.div>
+<a
+href={project.github}
+className="flex items-center gap-2 text-sm hover:text-green-400"
+>
 
-        ))}
+<FaGithub/> Code
 
-      </div>
+</a>
 
-    </section>
-  )
+<a
+href={project.demo}
+className="flex items-center gap-2 text-sm hover:text-green-400"
+>
+
+<FiExternalLink/> Demo
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+))}
+
+</div>
+
+</section>
+
+)
+
 }
