@@ -42,6 +42,15 @@ const projects = [
   github: "https://github.com/Samael1125/Local-Technician-Finder",
   demo: "#"
 },
+{
+  title: "TriviaBot",
+  description:
+    "Interactive chatbot that generates and manages trivia questions. Designed to provide engaging quizzes and automate question-answer interactions.",
+  tech: ["Python", "Flask", "API", "HTML", "CSS"],
+  image: "/projects/triviabot.png",
+  github: "https://github.com/Samael1125/TriviaBot",
+  demo: "#"
+},
 ]
 
 export default function Projects() {
