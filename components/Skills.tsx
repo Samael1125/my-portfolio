@@ -29,7 +29,7 @@ export default function Skills() {
           <motion.div
             key={index}
             whileHover={{ scale: 1.1 }}
-            className="flex flex-col items-center justify-center p-6 rounded-xl backdrop-blur-lg bg-white/10 hover:bg-white/20 transition"
+            className="flex flex-col items-center justify-center p-8 rounded-xl bg-white/5 border border-white/10 hover:border-blue-400 hover:scale-105 transition"
           >
 
             <div className="text-4xl mb-3 text-blue-400">

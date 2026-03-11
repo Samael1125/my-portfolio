@@ -9,6 +9,7 @@ import Timeline from "../components/Timeline"
 import Certificates from "../components/Certificates"
 import Achievements from "../components/Achievements"
 import Resume from "../components/Resume"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       <Resume/>
       <Github/>
       <Contact/>
+      <Footer/>
     </>
   )
 }
