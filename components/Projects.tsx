@@ -3,6 +3,8 @@
 import Image from "next/image"
 import { motion, useMotionValue, useTransform } from "framer-motion"
 import { FaGithub } from "react-icons/fa"
+import { useState } from "react"
+import ProjectModal from "./ProjectModal"
 
 const projects = [
 
@@ -41,6 +43,8 @@ github:"https://github.com/Samael1125/TriviaBot"
 ]
 
 function Card({project}:any){
+
+const [selectedProject,setSelectedProject]=useState(null)
 
 const x = useMotionValue(0)
 const y = useMotionValue(0)
