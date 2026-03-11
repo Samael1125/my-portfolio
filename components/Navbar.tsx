@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { Link as ScrollLink } from "react-scroll"
+import ThemeToggle from "@/components/ThemeToggle"
 
 export default function Navbar(){
 
@@ -15,11 +16,15 @@ Utkarsh<span className="text-green-400">.</span>
 
 <div className="flex gap-8">
 
+<div className="flex items-center gap-6">
+
 <ScrollLink to="about" smooth duration={500}>About</ScrollLink>
-<ScrollLink to="skills" smooth duration={500}>Skills</ScrollLink>
 <ScrollLink to="projects" smooth duration={500}>Projects</ScrollLink>
 <ScrollLink to="contact" smooth duration={500}>Contact</ScrollLink>
 
+<ThemeToggle/>
+
+</div>
 </div>
 
 </nav>
