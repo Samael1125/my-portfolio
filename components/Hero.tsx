@@ -1,70 +1,92 @@
 "use client"
 
-import { motion } from "framer-motion"
-import { TypeAnimation } from "react-type-animation"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 
-export default function Hero() {
+export default function Hero(){
 
 return(
 
-<section className="h-screen flex flex-col justify-center items-center text-center px-6">
+<section className="min-h-screen flex items-center px-10">
 
-<motion.h1
-initial={{opacity:0,y:40}}
-animate={{opacity:1,y:0}}
-transition={{duration:1}}
-className="text-6xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text"
+<div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+{/* LEFT SIDE */}
+
+<div>
+
+<p className="text-gray-400 mb-4">
+Software Engineer
+</p>
+
+<h1 className="text-6xl md:text-7xl font-bold leading-tight">
+
+Hello I'm <br/>
+
+<span style={{color:"var(--accent)"}}>
+Utkarsh Jhala
+</span>
+
+</h1>
+
+<p className="text-gray-400 mt-6 max-w-lg">
+Computer Science Engineer focused on Machine Learning,
+AI systems, and backend development. Building
+intelligent solutions for real world problems.
+</p>
+
+{/* BUTTONS */}
+
+<div className="flex items-center gap-6 mt-8">
+
+<a
+href="/resume.pdf"
+className="px-6 py-3 border border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition"
 >
 
-Utkarsh Jhala
+View CV
 
-</motion.h1>
+</a>
 
-<div className="text-xl mt-6 text-gray-300">
+<div className="flex gap-4 text-xl">
 
-<TypeAnimation
-sequence={[
-"AI Engineer",
-2000,
-"Machine Learning Developer",
-2000,
-"Backend Developer",
-2000
-]}
-speed={50}
-repeat={Infinity}
+<a href="https://github.com/Samael1125">
+<FaGithub/>
+</a>
+
+<a href="#">
+<FaLinkedin/>
+</a>
+
+<a href="#">
+<FaInstagram/>
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+{/* RIGHT SIDE AVATAR */}
+
+<div className="flex justify-center">
+
+<div className="relative w-72 h-72">
+
+<img
+src="/profile.jpg"
+className="rounded-full w-full h-full object-cover"
+/>
+
+<div
+className="absolute inset-0 rounded-full border-2"
+style={{borderColor:"var(--accent)"}}
 />
 
 </div>
 
-<p className="max-w-xl mt-6 text-gray-400">
-Building intelligent systems and scalable software solutions using
-machine learning, data science, and modern web technologies.
-</p>
-
-<div className="flex gap-6 mt-8">
-
-<a
-href="/resume.pdf"
-className="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg transition"
->
-Download Resume
-</a>
-
-<a
-href="https://github.com/Samael1125"
-className="text-2xl hover:text-blue-400"
->
-<FaGithub/>
-</a>
-
-<a
-href="https://linkedin.com"
-className="text-2xl hover:text-blue-400"
->
-<FaLinkedin/>
-</a>
+</div>
 
 </div>
 

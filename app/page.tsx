@@ -10,12 +10,14 @@ import Certificates from "../components/Certificates"
 import Achievements from "../components/Achievements"
 import Resume from "../components/Resume"
 import Footer from "../components/Footer"
+import Stats from "../components/Stats"
 
 export default function Home() {
   return (
     <>
       <Navbar/>
       <Hero/>
+      <Stats/>
       <About/>
       <Skills/>
       <Projects/>
