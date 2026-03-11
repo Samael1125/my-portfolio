@@ -6,6 +6,8 @@ import Projects from "../components/Projects"
 import Contact from "../components/Contact"
 import Github from "../components/Github"
 import Timeline from "../components/Timeline"
+import Certificates from "../components/Certificates"
+import Achievements from "../components/Achievements"
 
 export default function Home() {
   return (
@@ -14,8 +16,9 @@ export default function Home() {
       <Hero/>
       <About/>
       <Skills/>
-      <Timeline/>
       <Projects/>
+      <Timeline/>
+      <Certificates/>
       <Github/>
       <Contact/>
     </>
