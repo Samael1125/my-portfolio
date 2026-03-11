@@ -1,11 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Reveal from "./Reveal"
 
 export default function About(){
 
 return(
-
+<Reveal>
 <section id="about" className="py-40 px-6">
 
 <h2 className="text-5xl font-bold text-center mb-16">
@@ -42,7 +43,7 @@ className="p-6 rounded-xl bg-white/5 border border-white/10 text-center"
 </div>
 
 </section>
-
+</Reveal>
 )
 
 }

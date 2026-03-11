@@ -20,6 +20,9 @@
 
 import "./globals.css"
 import ParticlesBg from "@/components/ParticlesBg"
+import ScrollProgress from "../components/ScrollProgress"
+import CursorGlow from "../components/CursorGlow"
+import { ThemeProvider } from "next-themes"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
@@ -28,9 +31,14 @@ return (
 
 <body>
 
+<ScrollProgress/>
+<CursorGlow/>
 <ParticlesBg/>
+<ThemeProvider attribute="class">
 
 {children}
+
+</ThemeProvider>
 
 </body>
 

@@ -1,9 +1,14 @@
+"use client"
+
+import { motion } from "framer-motion"
+import CountUp from "react-countup"
+
 export default function Stats(){
 
 return(
 
 <section className="grid grid-cols-4 text-center py-20 max-w-5xl mx-auto">
-
+<CountUp end={12} duration={2}/>
 <div>
 <h3 className="text-4xl font-bold">21</h3>
 <p className="text-gray-400">Age</p>

@@ -15,6 +15,7 @@ import Education from "@/components/Education"
 import Experience from "@/components/Experience"
 import Coding from "@/components/Coding"
 import ShortProfile from "@/components/ShortProfile"
+import GithubActivity from "@/components/GithubActivity"
 
 export default function Home() {
   return (
@@ -32,7 +33,7 @@ export default function Home() {
       <Certificates/>
       <Achievements/>
       <Coding/>
-      <Github/>
+      <GithubActivity/>
       <Resume/>
       <Contact/>
       <Footer/>
