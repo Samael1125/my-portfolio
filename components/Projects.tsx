@@ -13,7 +13,9 @@ title:"Local Technician Finder",
 desc:"Full-stack platform for discovering verified local technicians with ratings, reviews and location-based sorting.",
 image:"/projects/technician.png",
 tech:["React","Node.js","MongoDB","REST API"],
-github:"https://github.com/Samael1125/Local-Technician-Finder"
+category: "Fullstack",
+github:"https://github.com/Samael1125/Local-Technician-Finder",
+demo:"#"
 },
 
 {
@@ -21,7 +23,9 @@ title:"Smart Irrigation ML System",
 desc:"Machine learning system analyzing groundwater data with Random Forest, XGBoost, SVM and Logistic Regression models.",
 image:"/projects/irrigation.png",
 tech:["Python","Machine Learning","GIS","Data Analytics"],
-github:"#"
+category: "ML",
+github:"#",
+demo:"#"
 },
 
 {
@@ -29,7 +33,10 @@ title:"Secure AI Code Review System",
 desc:"AI-powered platform that reviews code using LLMs and provides feedback on security, optimization and code quality.",
 image:"/projects/codereview.png",
 tech:["Python","Flask","SQLAlchemy","Bootstrap","Gemini API"],
-github:"https://github.com/Samael1125/Secure-AI-Code-Review-System"
+category: "Fullstack",
+
+github:"https://github.com/Samael1125/Secure-AI-Code-Review-System",
+demo:"#"
 },
 
 {
@@ -37,20 +44,20 @@ title:"Trivia Quiz Web Application",
 desc:"Interactive quiz platform using Flask and Open Trivia API with dynamic MCQs and real-time scoring.",
 image:"/projects/triviabot.png",
 tech:["Python","Flask","JavaScript","REST API"],
-github:"https://github.com/Samael1125/TriviaBot"
+category: "AI",
+github:"https://github.com/Samael1125/TriviaBot",
+demo:"#"
 }
 
 ]
 
 function Card({project}:any){
 
-const [selectedProject,setSelectedProject]=useState(null)
-
 const x = useMotionValue(0)
 const y = useMotionValue(0)
 
-const rotateX = useTransform(y, [-100,100],[15,-15])
-const rotateY = useTransform(x, [-100,100],[-15,15])
+const rotateX = useTransform(y, [-100,100],[12,-12])
+const rotateY = useTransform(x, [-100,100],[-12,12])
 
 function handleMouseMove(e:any){
 
@@ -83,10 +90,10 @@ transformPerspective:1200
 }}
 onMouseMove={handleMouseMove}
 onMouseLeave={handleMouseLeave}
-whileHover={{y:-8}}
+whileHover={{y:-10}}
 >
 
-{/* image */}
+{/* IMAGE */}
 
 <div className="relative h-60 overflow-hidden">
 
@@ -99,7 +106,7 @@ className="object-cover group-hover:scale-110 transition duration-500"
 
 </div>
 
-{/* content */}
+{/* CONTENT */}
 
 <div className="p-6">
 
@@ -111,7 +118,7 @@ className="object-cover group-hover:scale-110 transition duration-500"
 {project.desc}
 </p>
 
-{/* tech stack */}
+{/* TECH */}
 
 <div className="flex flex-wrap gap-2 mt-4">
 
@@ -128,9 +135,9 @@ className="text-xs px-3 py-1 bg-green-500/20 text-green-300 rounded-full"
 
 </div>
 
-{/* github */}
+{/* GITHUB */}
 
-<div className="mt-5 flex items-center gap-3">
+<div className="mt-5">
 
 <a
 href={project.github}
@@ -155,26 +162,58 @@ Github
 
 export default function Projects(){
 
+const [active,setActive] = useState("All")
+
+const filteredProjects =
+active === "All"
+? projects
+: projects.filter(p => p.category === active)
+
 return(
 
 <section className="py-32 px-6">
 
-<h2 className="text-5xl font-bold text-center mb-20">
+<h2 className="text-5xl font-bold text-center mb-16">
 
 A small selection of
 <span className="text-green-400"> recent projects</span>
 
 </h2>
 
-<div className="grid md:grid-cols-2 gap-14 max-w-6xl mx-auto">
+{/* FILTER BUTTONS */}
 
-{projects.map((p,i)=>(
+<div className="flex justify-center gap-4 mb-16 flex-wrap">
+
+{["All","Fullstack","ML","AI","Web"].map((cat)=>(
+<button
+key={cat}
+onClick={()=>setActive(cat)}
+className={`px-6 py-2 rounded-full border transition
+${active===cat
+? "bg-green-400 text-black"
+: "border-white/20 text-gray-400 hover:border-green-400 hover:text-green-400"}
+`}
+>
+{cat}
+</button>
+))}
+
+</div>
+
+{/* PROJECT GRID */}
+
+<motion.div
+layout
+className="grid md:grid-cols-2 gap-14 max-w-6xl mx-auto"
+>
+
+{filteredProjects.map((p,i)=>(
 
 <Card key={i} project={p}/>
 
 ))}
 
-</div>
+</motion.div>
 
 </section>
 

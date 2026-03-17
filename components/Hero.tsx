@@ -3,6 +3,7 @@
 import Image from "next/image"
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 import GridBackground from "./GridBackground"
+import MagneticButton from "./MagneticButton"
 
 export default function Hero() {
 
@@ -28,7 +29,7 @@ Software Engineer
 Hello I'm <br/>
 
 <span className="text-[#00ffa3]">
-Utkarsh Jhala
+Utkarsh Singh Jhala
 </span>
 
 </h1>
@@ -41,12 +42,11 @@ solutions for real world problems.
 
 <div className="flex items-center gap-6 mt-8">
 
-<a
-href="/resume.pdf"
-className="px-8 py-4 border text-lg border-green-400 text-green-400 rounded-full hover:bg-green-400 hover:text-black transition"
->
+
+
+<MagneticButton>
 View CV
-</a>
+</MagneticButton>
 
 <div className="flex gap-4 text-xl">
 

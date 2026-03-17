@@ -16,6 +16,8 @@ import Experience from "@/components/Experience"
 import Coding from "@/components/Coding"
 import ShortProfile from "@/components/ShortProfile"
 import GithubActivity from "@/components/GithubActivity"
+import LeetCodeStats from "@/components/LeetCodeStats"
+import DevActivity from "@/components/DevActivity"
 
 export default function Home() {
   return (
@@ -32,8 +34,7 @@ export default function Home() {
       <Timeline/>
       <Certificates/>
       <Achievements/>
-      <Coding/>
-      <GithubActivity/>
+      <DevActivity/>
       <Resume/>
       <Contact/>
       <Footer/>
