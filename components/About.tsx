@@ -7,7 +7,7 @@ export default function About(){
 
 return(
 <Reveal>
-<section id="about" className="py-40 px-6">
+<section id="about" className="py-40 px-6 max-w-7xl mx-auto">
 
 <h2 className="text-5xl font-bold text-center mb-16">
 About Me

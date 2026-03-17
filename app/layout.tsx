@@ -25,3 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+export const metadata = {
+title: "Utkarsh | Portfolio",
+description: "Full Stack Developer & ML Enthusiast"
+}

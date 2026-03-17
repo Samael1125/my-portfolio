@@ -101,6 +101,8 @@ whileHover={{y:-10}}
 src={project.image}
 alt={project.title}
 fill
+priority={true}
+quality={90}
 className="object-cover group-hover:scale-110 transition duration-500"
 />
 
@@ -171,7 +173,7 @@ active === "All"
 
 return(
 
-<section className="py-32 px-6">
+<section className="py-40 px-6 max-w-7xl mx-auto" id="projects">
 
 <h2 className="text-5xl font-bold text-center mb-16">
 

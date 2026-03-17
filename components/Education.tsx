@@ -31,7 +31,7 @@ export default function Education(){
 
 return(
 
-<section className="py-40 px-6">
+<section className="py-40 px-6 max-w-7xl mx-auto" id="education">
 
 <h2 className="text-5xl font-bold text-center mb-20">
 Education
@@ -68,7 +68,6 @@ className="p-8 rounded-xl bg-white/5 border border-white/10"
 ))}
 
 </div>
-
 </section>
 
 )

@@ -132,3 +132,6 @@ background:#020617;
 color:#ffffff;
 }
 
+html {
+  scroll-behavior: smooth;
+}

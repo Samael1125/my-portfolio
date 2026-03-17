@@ -64,7 +64,7 @@ className="px-4 py-2 bg-green-500/10 border border-green-400/20 rounded-lg text-
 ))}
 
 </div>
-
+<div className="mt-20 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"/>
 </section>
 
 )

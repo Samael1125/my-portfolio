@@ -35,7 +35,7 @@ export default function Certificates(){
 
 return(
 
-<section id="certificates" className="py-32 px-6">
+<section id="certificates" className="py-40 px-6 max-w-7xl mx-auto">
 
 <h2 className="text-4xl font-bold text-center mb-20">
 Certificates

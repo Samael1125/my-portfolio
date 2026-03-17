@@ -18,6 +18,7 @@ import ShortProfile from "@/components/ShortProfile"
 import GithubActivity from "@/components/GithubActivity"
 import LeetCodeStats from "@/components/LeetCodeStats"
 import DevActivity from "@/components/DevActivity"
+import Reveal from "@/components/Reveal"
 
 export default function Home() {
   return (
@@ -26,10 +27,14 @@ export default function Home() {
       <Hero/>
       <ShortProfile/>
       <Stats/>
-      <About/>
+      <Reveal>
+        <About/>
+      </Reveal>
       <Education/>
       <Skills/>
-      <Projects/>
+      <Reveal>
+        <Projects/>
+      </Reveal>
       <Experience/>
       <Timeline/>
       <Certificates/>
