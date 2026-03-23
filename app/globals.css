@@ -135,3 +135,22 @@ color:#ffffff;
 html {
   scroll-behavior: smooth;
 }
+.animate-pulse {
+  animation: pulse 6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%,100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+/* globals.css */
+.timeline-line {
+  background: linear-gradient(to bottom, transparent, #22c55e, transparent);
+  animation: glowLine 4s infinite linear;
+}
+
+@keyframes glowLine {
+  0% { opacity: 0.3; }
+  50% { opacity: 1; }
+  100% { opacity: 0.3; }
+}

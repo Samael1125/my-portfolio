@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import emailjs from "@emailjs/browser"
 
 export default function Contact(){
 
@@ -16,50 +17,93 @@ function handleChange(e:any){
 
 function handleSubmit(e:any){
   e.preventDefault()
-  alert("Message sent 🚀")
+
+  emailjs.send(
+    "service_r4ho5g9",
+    "template_ktbonmw",
+    form,
+    "tr3kvgmH_IPi9-SEy"
+  ).then(()=>{
+    alert("Message sent 🚀")
+  }).catch(()=>{
+    alert("Failed ❌")
+  })
 }
 
 return(
 
-<section className="py-32 px-6">
+<section id="contact" className="py-32 px-6">
 
-<h2 className="text-5xl font-bold text-center mb-20">
+<div className="max-w-2xl mx-auto">
+
+{/* Heading */}
+<h2 className="text-4xl md:text-5xl font-bold mb-6">
 Contact
 </h2>
 
-<form
-onSubmit={handleSubmit}
-className="max-w-xl mx-auto space-y-6"
->
+<p className="text-gray-400 mb-8">
+Open to internships, AI projects, and freelance collaboration.
+</p>
 
+{/* Info */}
+<div className="space-y-2 mb-10 text-sm text-gray-300">
+<p>Email: <span className="text-green-400">uttkarshsj.2102@gmail.com</span></p>
+<p>GitHub: <span className="text-green-400">github.com/Samael1125</span></p>
+<p>LinkedIn: <span className="text-green-400">linkedin.com/in/yourprofile</span></p>
+</div>
+
+{/* Form */}
+<form onSubmit={handleSubmit} className="space-y-6">
+
+{/* Name */}
+<div>
+<label className="block mb-2 text-sm">Name</label>
 <input
 name="name"
-placeholder="Your Name"
+placeholder="Your name"
 onChange={handleChange}
-className="w-full p-4 rounded-lg bg-white/5 border border-white/10"
+required
+className="w-full p-4 rounded-xl bg-white/5 border border-white/10 focus:border-green-400 outline-none transition"
 />
+</div>
 
+{/* Email */}
+<div>
+<label className="block mb-2 text-sm">Email</label>
 <input
 name="email"
-placeholder="Your Email"
+type="email"
+placeholder="you@example.com"
 onChange={handleChange}
-className="w-full p-4 rounded-lg bg-white/5 border border-white/10"
+required
+className="w-full p-4 rounded-xl bg-white/5 border border-white/10 focus:border-green-400 outline-none transition"
 />
+</div>
 
+{/* Message */}
+<div>
+<label className="block mb-2 text-sm">Message</label>
 <textarea
 name="message"
-placeholder="Your Message"
+rows={5}
+placeholder="Tell me about your project or role"
 onChange={handleChange}
-className="w-full p-4 rounded-lg bg-white/5 border border-white/10"
+required
+className="w-full p-4 rounded-xl bg-white/5 border border-white/10 focus:border-green-400 outline-none transition"
 />
+</div>
 
+{/* Button */}
 <button
-className="w-full py-4 bg-green-500 rounded-lg hover:bg-green-400 transition"
+type="submit"
+className="w-full py-4 rounded-xl bg-green-500 hover:bg-green-400 transition font-semibold"
 >
 Send Message
 </button>
 
 </form>
+
+</div>
 
 </section>
 

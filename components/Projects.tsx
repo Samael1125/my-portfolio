@@ -57,7 +57,18 @@ date: "Sep '24 - Dec '24",
 
 ]
 
-function Card({project}:any){
+type Project = {
+  title: string
+  desc: string
+  image: string
+  tech: string[]
+  category: string
+  github: string
+  live?: string
+  date: string
+}
+
+function Card({ project }: { project: Project }){
 
 const x = useMotionValue(0)
 const y = useMotionValue(0)
@@ -153,7 +164,11 @@ className="text-xs px-3 py-1 bg-green-500/20 text-green-300 rounded-full"
   <FaGithub/>
 </a>
 
-<a href={project.live} target="_blank">
+<a
+  href={project.live}
+  target="_blank"
+  className="text-blue-400 hover:text-blue-300"
+>
   Live Demo
 </a>
 
