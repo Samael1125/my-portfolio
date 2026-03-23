@@ -3,27 +3,27 @@ export default function Journey(){
 const journey = [
 
 {
-year:"2023",
-title:"B.Tech Computer Science Engineering",
-desc:"Started Bachelor of Technology in Computer Science Engineering."
-},
-
-{
-year:"2024",
-title:"Local Technician Finder",
-desc:"Built a platform connecting users with nearby technicians using Flask and SQLite."
-},
-
-{
-year:"2025",
+year:"2026",
 title:"Secure AI Code Review System",
 desc:"Developed an AI-powered system to review source code for vulnerabilities and quality."
 },
 
 {
 year:"2025",
+title:"Local Technician Finder",
+desc:"Built a platform connecting users with nearby technicians using Flask and SQLite."
+},
+
+{
+year:"2025",
 title:"Smart Irrigation ML System",
 desc:"Created ML models analyzing groundwater data for smart irrigation planning."
+},
+
+{
+year:"2023",
+title:"B.Tech Computer Science Engineering",
+desc:"Started Bachelor of Technology in Computer Science Engineering."
 }
 
 ]

@@ -19,7 +19,7 @@ Machine Learning, and backend development. I enjoy building intelligent systems 
 through technology.
 </p>
 
-<div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mt-20">
+{/* <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto mt-20">
 
 {[
 "Artificial Intelligence",
@@ -40,7 +40,7 @@ className="p-6 rounded-xl bg-white/5 border border-white/10 text-center"
 
 ))}
 
-</div>
+</div> */}
 
 </section>
 </Reveal>

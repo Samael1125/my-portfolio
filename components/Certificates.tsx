@@ -1,32 +1,39 @@
 "use client"
 
+
+import Image from "next/image"
 import { motion } from "framer-motion"
 import { FaCertificate } from "react-icons/fa"
+import ProjectModal from "./ProjectModal"
 
 const certificates = [
 
 {
 title:"Data Analytics with Python",
 org:"NPTEL",
-year:"2025"
+year:"2025",
+image: "/certs/python.png"
 },
 
 {
 title:"Full Stack Web Development",
 org:"Placify Technologies",
-year:"2025"
+year:"2025",
+image: "/certs/python.png"
 },
 
 {
 title:"MS SQL",
 org:"Intellipaat",
-year:"2025"
+year:"2025",
+image: "/certs/python.png"
 },
 
 {
 title:"Mastering C",
 org:"CSE Pathshala",
-year:"2024"
+year:"2024",
+image: "/certs/python.png"
 }
 
 ]
@@ -55,6 +62,7 @@ className="p-8 rounded-xl bg-white/5 border border-white/10 backdrop-blur-lg"
 <p className="text-gray-400 mt-2">{c.org}</p>
 
 <span className="text-green-400 text-sm">{c.year}</span>
+<Image src={c.image} fill className="object-cover rounded-xl"/>
 
 </motion.div>
 ))}

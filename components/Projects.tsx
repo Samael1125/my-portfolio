@@ -9,13 +9,26 @@ import ProjectModal from "./ProjectModal"
 const projects = [
 
 {
+title:"Secure AI Code Review System",
+desc:"AI-powered platform that reviews code using LLMs and provides feedback on security, optimization and code quality.",
+image:"/projects/codereview.png",
+tech:["Python","Flask","SQLAlchemy","Bootstrap","Gemini API"],
+category: "Fullstack",
+
+github:"https://github.com/Samael1125/Secure-AI-Code-Review-System",
+live: "https://your-demo-link.com",
+date: "Jan '26 - Present",
+},
+
+{
 title:"Local Technician Finder",
 desc:"Full-stack platform for discovering verified local technicians with ratings, reviews and location-based sorting.",
 image:"/projects/technician.png",
 tech:["React","Node.js","MongoDB","REST API"],
 category: "Fullstack",
 github:"https://github.com/Samael1125/Local-Technician-Finder",
-demo:"#"
+live: "https://your-demo-link.com",
+date: "Jun '25 - Jul '25",
 },
 
 {
@@ -25,19 +38,11 @@ image:"/projects/irrigation.png",
 tech:["Python","Machine Learning","GIS","Data Analytics"],
 category: "ML",
 github:"#",
-demo:"#"
+live: "https://your-demo-link.com",
+date: "Jan '25 - Jun '25",
 },
 
-{
-title:"Secure AI Code Review System",
-desc:"AI-powered platform that reviews code using LLMs and provides feedback on security, optimization and code quality.",
-image:"/projects/codereview.png",
-tech:["Python","Flask","SQLAlchemy","Bootstrap","Gemini API"],
-category: "Fullstack",
 
-github:"https://github.com/Samael1125/Secure-AI-Code-Review-System",
-demo:"#"
-},
 
 {
 title:"Trivia Quiz Web Application",
@@ -46,7 +51,8 @@ image:"/projects/triviabot.png",
 tech:["Python","Flask","JavaScript","REST API"],
 category: "AI",
 github:"https://github.com/Samael1125/TriviaBot",
-demo:"#"
+live: "https://your-demo-link.com",
+date: "Sep '24 - Dec '24",
 }
 
 ]
@@ -119,7 +125,9 @@ className="object-cover group-hover:scale-110 transition duration-500"
 <p className="text-gray-400 mt-2 text-sm">
 {project.desc}
 </p>
-
+<p className="text-xs text-gray-500 mt-1">
+{project.date}
+</p>
 {/* TECH */}
 
 <div className="flex flex-wrap gap-2 mt-4">
@@ -139,17 +147,14 @@ className="text-xs px-3 py-1 bg-green-500/20 text-green-300 rounded-full"
 
 {/* GITHUB */}
 
-<div className="mt-5">
+<div className="mt-5 flex items-center gap-4">
 
-<a
-href={project.github}
-target="_blank"
-className="flex items-center gap-2 text-green-400 hover:text-green-300 transition"
->
+<a href={project.github} target="_blank">
+  <FaGithub/>
+</a>
 
-<FaGithub/>
-Github
-
+<a href={project.live} target="_blank">
+  Live Demo
 </a>
 
 </div>
