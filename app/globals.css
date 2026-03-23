@@ -135,14 +135,3 @@ color:#ffffff;
 html {
   scroll-behavior: smooth;
 }
-
-body {
-  background-color: #020617;
-
-  background-image: radial-gradient(
-    rgba(0,255,150,0.15) 1px,
-    transparent 1px
-  );
-
-  background-size: 20px 20px;
-}
