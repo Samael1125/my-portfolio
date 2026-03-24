@@ -47,9 +47,41 @@ Open to internships, AI projects, and freelance collaboration.
 
 {/* Info */}
 <div className="space-y-2 mb-10 text-sm text-gray-300">
-<p>Email: <span className="text-green-400">uttkarshsj.2102@gmail.com</span></p>
-<p>GitHub: <span className="text-green-400">github.com/Samael1125</span></p>
-<p>LinkedIn: <span className="text-green-400">linkedin.com/in/yourprofile</span></p>
+
+  <p>
+    Email:{" "}
+    <a
+      href="mailto:uttkarshsj.2102@gmail.com"
+      className="text-green-400 hover:underline"
+    >
+      uttkarshsj.2102@gmail.com
+    </a>
+  </p>
+
+  <p>
+    GitHub:{" "}
+    <a
+      href="https://github.com/Samael1125"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-400 hover:underline"
+    >
+      github.com/Samael1125
+    </a>
+  </p>
+
+  <p>
+    LinkedIn:{" "}
+    <a
+      href="https://linkedin.com/in/utkarsh-singh-jhala"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-400 hover:underline"
+    >
+      linkedin.com/in/utkarsh-singh-jhala
+    </a>
+  </p>
+
 </div>
 
 {/* Form */}

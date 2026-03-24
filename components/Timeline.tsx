@@ -3,38 +3,37 @@
 import { motion } from "framer-motion"
 import Image from "next/image"
 
+
 const timeline = [
+  {
+    year: "2026",
+    desc: "Developed Secure AI Code Review System using LLMs for vulnerability detection and optimization.",
+    images: ["/journey/ai-review.png"],
+  },
 
-{
-year:"2026",
-desc:"Developed Secure AI Code Review System using LLMs for vulnerability detection and optimization.",
-images:["/projects/codereview.png"]
-},
+  {
+    year: "2025",
+    desc: "Built Smart Irrigation ML System + Local Technician Finder with full-stack architecture.",
+    images: [
+      "/journey/irrigation.png",
+      "/journey/technician.png",
+    ],
+  },
 
-{
-year:"2025",
-desc:"Built Smart Irrigation ML System + Local Technician Finder with full-stack architecture.",
-images:[
-"/projects/irrigation.png",
-"/projects/technician.png"
-]
-},
+  {
+    year: "2024",
+    desc: "Strengthened backend + ML skills. Built multiple real-world systems and academic projects.",
+    images: ["/journey/ml-dashboard.png"],
+  },
 
-{
-year:"2024",
-desc:"Strengthened backend + ML skills. Built multiple real-world systems and academic projects.",
-images:[
-"/projects/triviabot.png"
-]
-},
+  {
+    year: "2023",
+    desc: "Started B.Tech in Computer Science Engineering and began DSA + development journey.",
+    images: ["/journey/coding-start.png"], // 👈 add this (important)
+  },
+];
 
-{
-year:"2023",
-desc:"Started B.Tech in Computer Science Engineering and began DSA + development journey.",
-images:[]
-}
 
-]
 
 export default function Timeline(){
 
