@@ -6,6 +6,7 @@ import CursorGlow from "@/components/CursorGlow"
 import Chatbot from "@/components/Chatbot"
 import ParticlesBg from "@/components/ParticlesBg"
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -19,6 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <ParticlesBg/>
           <Chatbot/>
           <Analytics/>
+          <SpeedInsights/>
           {children}
 
         </ThemeProvider>
