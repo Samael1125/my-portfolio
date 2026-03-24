@@ -1,12 +1,12 @@
 export const certificates = [
   // 🧠 Programming
-  {
-    title: "Python Programming Certification",
-    issuer: "Certification Program",
-    category: "Programming",
-    date: "2024",
-    image: "/certs/python.png",
-  },
+  // {
+  //   title: "Python Programming Certification",
+  //   issuer: "Certification Program",
+  //   category: "Programming",
+  //   date: "2024",
+  //   image: "/certs/python.png",
+  // },
   {
     title: "SQL Certification",
     issuer: "Intellipaat",

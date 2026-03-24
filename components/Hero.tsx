@@ -58,7 +58,7 @@ solutions for real world problems.
 <FaGithub/>
 </a>
 
-<a href="https://www.linkedin.com/in/utkarsh-singh-jhala/">
+<a href="https://www.linkedin.com/in/utkarsh-singh-jhala">
 <FaLinkedin/>
 </a>
 
