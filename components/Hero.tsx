@@ -42,13 +42,17 @@ solutions for real world problems.
 
 <div className="flex items-center gap-6 mt-8">
 
+  <a
+    href="/resume.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <MagneticButton>
+      View CV
+    </MagneticButton>
+  </a>
 
-
-<MagneticButton>
-View CV
-</MagneticButton>
-
-<div className="flex gap-4 text-xl">
+  <div className="flex gap-4 text-xl">
 
 <a href="https://github.com/Samael1125">
 <FaGithub/>
@@ -103,7 +107,7 @@ View CV
 <div className="relative w-[370px] h-[370px] rounded-full overflow-hidden profile-glow">
 
 <Image
-src="/profile.jpg"
+src="/Utk.jpeg"
 alt="profile"
 fill
 className="object-cover"
